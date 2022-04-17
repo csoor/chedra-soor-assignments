@@ -44,6 +44,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="F:\Coding_Dojo\Java-2022\chedra-soor-assignments\Week2\Zoo Keeper Part 2"/>
 			<item value="F:\Coding_Dojo\Java-2022\chedra-soor-assignments\Week2"/>
 			<item value="F:\Coding_Dojo\Java-2022\chedra-soor-assignments\Week2\Extra Practice\Zoo Keeper 1"/>
 		</list>
