@@ -1,0 +1,14 @@
+package mainPackage;
+
+public class Mammal {
+
+		private int energyLevel = 9000;
+
+		public int displayEnergy()
+		{
+			System.out.println("Energy Level: " + energyLevel);
+			return energyLevel;
+		}
+		
+
+}

@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+F:\Coding_Dojo\Java-2022\chedra-soor-assignments\Week2\Extra Practice\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3095173517.index
+700471665.index

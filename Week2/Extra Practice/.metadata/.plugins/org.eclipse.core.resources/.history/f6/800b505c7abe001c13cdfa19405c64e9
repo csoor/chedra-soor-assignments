@@ -1,0 +1,13 @@
+package mainPackage;
+
+public class Gorilla {
+	private int energyLevel = 9000;
+	
+	public int throwSomething()
+	{
+		System.out.println("Gorilla threw banana's at you");
+		energyLevel -= 50;
+		return energyLevel;
+	}
+	
+}
