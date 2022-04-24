@@ -1,13 +1,13 @@
-package com.codingdojo.firstproject;
+package com.codingdojo.daikichiroutes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FirstprojectApplication {
+public class DaikichiroutesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstprojectApplication.class, args);
+		SpringApplication.run(DaikichiroutesApplication.class, args);
 	}
 
 }
