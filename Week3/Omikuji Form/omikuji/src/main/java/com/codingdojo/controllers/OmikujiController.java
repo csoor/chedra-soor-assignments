@@ -14,5 +14,12 @@ public class OmikujiController {
 	{
 		return "index.jsp";
 	}
+	@RequestMapping("/omikuji/show")
+	public String show(HttpSession session, Model model)
+	{
+		String result = (String) session.getAttribute("result");
+		model.addAttribute("result", result);
+		return "Omikuji.jsp";
+	}
 	
 }
