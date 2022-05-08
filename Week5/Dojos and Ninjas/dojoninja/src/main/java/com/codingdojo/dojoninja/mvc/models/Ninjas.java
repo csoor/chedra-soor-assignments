@@ -1,7 +1,6 @@
 package com.codingdojo.dojoninja.mvc.models;
 
 import java.util.Date;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,23 +8,31 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="dojos")
-public class Dojos {
+@Table(name="ninjas")
+public class Ninjas {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@NotNull
-	@Size(min = 5, max = 200)
-	private String name;
+	@Size(min = 1, max = 200)
+	private String firstName;
+	@NotNull
+	@Size(min = 1, max = 200)
+	private String lastName;
+	@NotNull
+	@Min(1)
+	private int age;
 	
 	// This will not allow the createdAt column to be updated after creation
 	@Column(updatable=false)
@@ -34,18 +41,24 @@ public class Dojos {
 	@DateTimeFormat(pattern="yyyy-MM--dd")
 	private Date updatedAt;
 	
-	@OneToMany(mappedBy = "dojo", fetch = FetchType.LAZY)
-	private List<Ninjas> ninjas;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "dojos_id")
+	private Dojos dojos;
 	
-	//Constructors 
-	public Dojos() {
-	}
-	public Dojos(String name, Date createdAt, Date updatedAt, List<Ninjas> ninjas)
+	//Constructors
+	public Ninjas ()
 	{
-		this.name = name;
+		
+	}
+	
+	public Ninjas(String firstName, String lastName, int age, Date createdAt, Date updatedAt, Dojos dojos)
+	{
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
 		this.createdAt = createdAt;
 		this.updatedAt = updatedAt;
-		this.ninjas = ninjas;
+		this.dojos = dojos;
 	}
 	
     @PrePersist
@@ -58,13 +71,17 @@ public class Dojos {
     }
     
     //Getters and Setters
-    public Long getId()
+    public String getFirstName()
     {
-    	return id;
+    	return firstName;
     }
-    public String getName()
+    public String getLastName()
     {
-    	return name;
+    	return lastName;
+    }
+    public int getAge()
+    {
+    	return age;
     }
     public Date getCreated() 
     {
@@ -74,17 +91,21 @@ public class Dojos {
     {
     	return updatedAt;
     }
-    public List<Ninjas> getNinjas()
+    public Dojos getDojos()
     {
-    	return ninjas;
+    	return dojos;
     }
-    public void setId(Long id)
+    public void setFirstName(String firstName)
     {
-    	this.id = id;
+    	this.firstName = firstName;
     }
-    public void setName(String name)
+    public void setLastName(String lastName)
     {
-    	this.name = name;
+    	this.lastName = lastName;
+    }
+    public void setAge(int age)
+    {
+    	this.age = age;
     }
     public void setCreated(Date createdAt)
     {
@@ -94,8 +115,8 @@ public class Dojos {
     {
     	this.updatedAt = updatedAt;
     }
-    public void setNinjas(List<Ninjas> ninjas)
+    public void setDojo(Dojos dojos)
     {
-    	this.ninjas = ninjas;
+    	this.dojos = dojos;
     }
 }
