@@ -8,11 +8,11 @@
 		<version>2.6.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.caresoft.clinicapp</groupId>
-	<artifactId>caresoftinterface</artifactId>
+	<groupId>com.codingdojo.caresoft</groupId>
+	<artifactId>CareSoftInterface</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>caresoftinterface</name>
+	<name>CareSoftInterface</name>
 	<description>CareSoft Interfaces</description>
 	<properties>
 		<java.version>17</java.version>
