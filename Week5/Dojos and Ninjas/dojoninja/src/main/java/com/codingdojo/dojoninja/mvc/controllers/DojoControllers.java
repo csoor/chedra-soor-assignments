@@ -12,14 +12,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Controllers {
+@RequestMapping("/dojo")
+public class DojoControllers {
 	
 	@Autowired
 	private DojoServices dojo;
-	@Autowired
-	private NinjaServices ninja;
+
+	@GetMapping("/new")
+	public String createDojo(@ModelAttribute("dojo") Dojos dojo)
+	{
+		return "Dojo.jsp";
+	}
 	
 	
 }

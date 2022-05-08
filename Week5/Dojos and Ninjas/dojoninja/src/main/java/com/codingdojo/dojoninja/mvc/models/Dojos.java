@@ -24,7 +24,7 @@ public class Dojos {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@NotNull
-	@Size(min = 5, max = 200)
+	@Size(min = 2, max = 200)
 	private String name;
 	
 	// This will not allow the createdAt column to be updated after creation
