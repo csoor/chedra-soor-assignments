@@ -8,7 +8,7 @@
 <title>Omikuji</title>
 </head>
 <body>
-	<h1>Send and Omikuji</h1>
+	<h1>Send an Omikuji</h1>
 	<form action="/message" method="post">
 		<div>
 			<label for="">Pick any number from 5 to 25</label><br />
@@ -19,16 +19,12 @@
 			<input type="text" name="city"/>
 		</div>
 		<div>
-			<label for="">Enter professional endeavor or hobby</label><br />
+			<label for="">Enter professional hobby</label><br />
 			<input type="text" name="hobby"/>
 		</div>
 		<div>
 			<label for="">Enter any type of cat</label><br />
 			<input type="text" name="cat"/>
-		</div>
-		<div>
-			<label for="">Say something nice to someone:</label><br />
-			<textarea name="message" id="" cols="30" rows="10"></textarea>
 		</div>
 		
 		<p>Send and Show a friend</p>
