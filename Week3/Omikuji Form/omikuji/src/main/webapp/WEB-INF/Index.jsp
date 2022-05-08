@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Send and Omikuji</h1>
-	<form action="" method="post">
+	<form action="/message" method="post">
 		<div>
 			<label for="">Pick any number from 5 to 25</label><br />
 			<input type="number" name="number"/>
@@ -19,16 +19,8 @@
 			<input type="text" name="city"/>
 		</div>
 		<div>
-			<label for="">Enter the name of any real person</label><br />
-			<input type="text" name="person"/>
-		</div>
-		<div>
 			<label for="">Enter professional endeavor or hobby</label><br />
 			<input type="text" name="hobby"/>
-		</div>
-		<div>
-			<label for="">Enter any type of living thing</label><br />
-			<input type="text" name="livingThing"/>
 		</div>
 		<div>
 			<label for="">Enter any type of cat</label><br />

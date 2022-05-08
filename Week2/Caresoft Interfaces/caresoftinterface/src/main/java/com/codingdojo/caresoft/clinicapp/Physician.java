@@ -1,5 +1,5 @@
 package com.codingdojo.caresoft.clinicapp;
 
-public class Physician {
-
+public class Physician extends User implements HIPAACompliantUser{
+	
 }
