@@ -4,9 +4,9 @@ public class CafeUtil {
     public int getStreakGoal()
     {
         int sum = 0;
-        for(int weeks = 1; weeks < 11; weeks++)
+        while(sum < 10)
         {
-            sum += weeks;
+            sum += 1;
         }
             
         return sum;
@@ -15,9 +15,9 @@ public class CafeUtil {
     public double getOrderTotal(double[] lineItems)
     {
         double sum = 0;
-        for (double price: lineItems)
+        for (int price = 0; price < lineItems.length; price++)
         {
-            sum += price;
+            sum += lineItems[price];
         }
         return sum;
     }
