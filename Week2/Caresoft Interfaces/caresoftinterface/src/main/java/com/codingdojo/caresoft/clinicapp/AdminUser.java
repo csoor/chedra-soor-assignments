@@ -27,6 +27,20 @@ public class AdminUser extends User implements HIPAACompliantUser,HIPAACompliant
         securityIncidents.add(report);
     }
 
+	public AdminUser() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public AdminUser(Integer id) {
+		super(id);
+		// TODO Auto-generated constructor stub
+	}
+
+	public AdminUser(int i, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void authIncident() {
         String report = String.format(
             "Datetime Submitted: %s \n,  ID: %s\n Notes: %s \n", 
@@ -46,6 +60,24 @@ public class AdminUser extends User implements HIPAACompliantUser,HIPAACompliant
 	}
 	public void setSecurityIncidents(ArrayList<String> securityIncidents) {
 		this.securityIncidents = securityIncidents;
+	}
+
+	@Override
+	public ArrayList<String> reportSecurityIncidents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean assignPin(int pin) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean accessAuthorized(Integer confirmedAuthID) {
+		// TODO Auto-generated method stub
+		return false;
 	}
     
     
