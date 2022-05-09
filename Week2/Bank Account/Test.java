@@ -9,6 +9,7 @@ public class Test {
         myAccount.displayBalance();
 
         myAccount.withdraw(99, "savings");
+        myAccount.withdraw(22, "checking");
 
         myAccount.displayBalance();
     }

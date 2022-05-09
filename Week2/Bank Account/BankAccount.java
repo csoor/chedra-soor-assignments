@@ -30,6 +30,7 @@ public class BankAccount {
             savings += amount;
         }
 
+
     }
 
     public void withdraw(double amount, String account)
@@ -41,6 +42,7 @@ public class BankAccount {
             {
                 complete = true;
                 checking -= amount;
+                System.out.println("Withdraw: " + amount);
             }
         }
         else if(account == "savings")
@@ -49,6 +51,7 @@ public class BankAccount {
             {
                 complete = true;
                 savings -= amount;
+                System.out.println("Withdraw: " + amount);
             }
         }
         if(complete)
