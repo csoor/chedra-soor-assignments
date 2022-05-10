@@ -4,12 +4,14 @@ public class User {
     protected Integer id;
     protected int pin;
     
+    //Constructors
     public User(){
     	
     }
 	public User(Integer id) {
 		this.id = id;
 	}
+	//Getters and Setters
 	public Integer getId() {
 		return id;
 	}
