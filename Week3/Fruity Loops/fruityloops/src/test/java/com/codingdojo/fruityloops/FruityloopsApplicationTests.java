@@ -1,10 +1,10 @@
-package com.codingdojo.fruitloops;
+package com.codingdojo.fruityloops;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FruitloopsApplicationTests {
+class FruityloopsApplicationTests {
 
 	@Test
 	void contextLoads() {
