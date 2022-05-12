@@ -19,6 +19,7 @@ public class FruitController {
 		fruits.add(new Fruit("Dragon Fruit", 4.5));
 		fruits.add(new Fruit("Banana", 2.5));
 		
+		//2nd parameter fruits matches the ArrayList(var) name above
 		model.addAttribute("fruits", fruits);
 		
 		return "FruitStore.jsp";

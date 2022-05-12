@@ -3,12 +3,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 
-
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script type="text/javascript" src="js/app.js"></script>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>The Fruity Store</title>
 </head>
 <body>
 	<div class = "container">
@@ -19,7 +20,10 @@
 				<th>Name</th>
 				<th>Price</th>
 			</tr>
-			<!--Since var ="fruit".  It should be fruit.getName(), fruit.getPrice().  You're using "fruits".  -->
+			<!--Since var ="fruit".  It should be fruit.getName(), fruit.getPrice(). 
+			 You're using "fruits".  -->
+			 <!-- items = "${fruits}" matches "fruits" in 
+			 model.addAttribute("fruits", fruits); -->
 			<c:forEach items = "${fruits}" var = "fruit"> 
 			<tr>
 				<td><c:out value = "${fruit.getName()}"/></td>
