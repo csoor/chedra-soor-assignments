@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,7 +18,8 @@ import com.savetravels.mvc.services.ExpenseService;
 @Controller
 public class MainController {
 	
-	ExpenseService  expenseService;
+	@Autowired
+	private ExpenseService expenseService;
 	
 	@RequestMapping("/")
 	public String index()
@@ -25,16 +27,17 @@ public class MainController {
 		return "index.jsp";
 	}
 	@RequestMapping("/expenses")
-	public String newExpense(@ModelAttribute("expense") Expense expense, Model m)
+	public String newExpense(@ModelAttribute("expenses") Expense expense, Model m)
 	{
 		List<Expense> e = expenseService.allExpense();
-		m.addAttribute("expense", e);
+		m.addAttribute("expenses", e);
 		return "index.jsp";
 	}
 	@PostMapping("/travels")
-	public String create(@Valid @ModelAttribute("expense") Expense expense, BindingResult result)
+	public String create(@Valid @ModelAttribute("expenses") Expense expense, BindingResult result)
 	{
 		if(result.hasErrors()) {
+			
 			return "index.jsp";
 		} else {
 			expenseService.createExpense(expense);
