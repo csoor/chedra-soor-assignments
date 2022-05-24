@@ -24,13 +24,13 @@ public class Expense {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@NotNull
-	@Size(min = 5, max = 200, message = "Expense must be at least 5 characters")
+	@Size(min = 3, max = 200, message = "Expense must be at least 3 characters")
 	private String expense;
 	@NotNull
 	@Size(min = 5, max = 200, message = "Vendor must be at least 5 characters")
 	private String vendor;
 	@NotNull
-	@Min(value = 50, message = "Must be at least $50")
+	@Min(value = 5, message = "Must be at least $5")
 	private double amount;
 	@NotNull
 	@Size(min = 5, max = 300, message = "Description must be at least 5 characters")

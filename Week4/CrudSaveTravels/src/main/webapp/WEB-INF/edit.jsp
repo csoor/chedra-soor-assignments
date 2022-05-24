@@ -8,43 +8,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Full CRUD Save Travels</title>
+<title>Edit Expense</title>
 </head>
 <body>
-	<h1>Save Travels</h1>
-	<!-- Table -->
-	<table>
-		<thead>
-			<tr>
-				<th>Expense</th>
-				<th>Vendor</th>
-				<th>Amount</th>
-				<th>Actions</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${expense}" var = "e" >
-				<tr>
-					<td>
-						<a href="/expenses/show/${e.id}"><c:out value="${e.expense}"></c:out></a>
-					</td>
-					<td><c:out value="${e.vendor}"></c:out></td>
-					<td>$ <c:out value="${e.amount}"></c:out></td>
-					<td>
-						<a href="/expenses/edit/${e.id}">edit</a>
-						<form action="/expenses/delete/${e.id}"  method= "post">
-    						<input type="hidden" name="_method" value="delete">
-    						<input type="submit" value="Delete">
-						</form>
-					</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<br>
-	<h2>Add your expenses</h2>
 	<!-- Form -->
-	<form:form action="/travels" method ="post" modelAttribute ="expenses">
+	<form:form action="/expenses/${edit.id}" method ="post" modelAttribute ="edit">
 		<div>
 			<form:label path="expense">Expense</form:label>
 			<form:errors path="expense"/>
