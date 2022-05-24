@@ -32,10 +32,9 @@
 					<td>$ <c:out value="${e.amount}"></c:out></td>
 					<td>
 						<a href="/expenses/edit/${e.id}">edit</a>
-						<form action="/expenses/delete/${e.id}"  method= "post">
-    						<input type="hidden" name="_method" value="delete">
-    						<input type="submit" value="Delete">
-						</form>
+						<form:form action="/expenses/delete/${e.id}"  method="post">
+    						<button type="submit">Delete</button>
+						</form:form>
 					</td>
 				</tr>
 			</c:forEach>

@@ -26,8 +26,7 @@ public class MainController {
 	@RequestMapping("/")
 	public String index()
 	{
-		return "redirect:/expenses";
-	}
+		return "redirect:/expenses";	}
 	@RequestMapping("/expenses")
 	public String newExpense(@ModelAttribute("expenses") Expense expense, Model m)
 	{
@@ -70,8 +69,9 @@ public class MainController {
 		}
 	}
 	
-	@DeleteMapping("/expenses/delete/{id}")
-	public String destroy(@PathVariable("id") Long id) {
+//DeleteMapping("/expenses/delete/{id}")
+	@PostMapping("/expenses/delete/{id}")
+	public String destroy(@PathVariable Long id) {
 		expenseService.delete(id);
 		return "redirect:/expenses";
 	}
